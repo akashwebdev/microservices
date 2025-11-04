@@ -17,7 +17,7 @@ namespace Mango.Services.Coupon.Migrations
                 {
                     CouponId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CouponCode = table.Column<int>(type: "int", nullable: false),
+                    CouponCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DiscountAmount = table.Column<double>(type: "float", nullable: false),
                     MinAmount = table.Column<int>(type: "int", nullable: false),
                     LastUpdated = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -26,6 +26,11 @@ namespace Mango.Services.Coupon.Migrations
                 {
                     table.PrimaryKey("PK_Coupons", x => x.CouponId);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Coupons",
+                columns: new[] { "CouponId", "CouponCode", "DiscountAmount", "LastUpdated", "MinAmount" },
+                values: new object[] { 1, "AMTEC", 10.0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 20 });
         }
 
         /// <inheritdoc />

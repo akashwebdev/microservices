@@ -30,8 +30,9 @@ namespace Mango.Services.Coupon.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CouponId"));
 
-                    b.Property<int>("CouponCode")
-                        .HasColumnType("int");
+                    b.Property<string>("CouponCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("DiscountAmount")
                         .HasColumnType("float");
@@ -45,6 +46,16 @@ namespace Mango.Services.Coupon.Migrations
                     b.HasKey("CouponId");
 
                     b.ToTable("Coupons");
+
+                    b.HasData(
+                        new
+                        {
+                            CouponId = 1,
+                            CouponCode = "AMTEC",
+                            DiscountAmount = 10.0,
+                            LastUpdated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            MinAmount = 20
+                        });
                 });
 #pragma warning restore 612, 618
         }
