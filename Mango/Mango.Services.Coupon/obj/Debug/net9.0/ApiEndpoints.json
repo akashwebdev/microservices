@@ -2,7 +2,7 @@
   {
     "ContainingType": "Mango.Services.Coupon.Controllers.CouponAPIController",
     "Method": "Get",
-    "RelativePath": "api/CouponAPI",
+    "RelativePath": "api/coupon22",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -22,7 +22,7 @@
   {
     "ContainingType": "Mango.Services.Coupon.Controllers.CouponAPIController",
     "Method": "Post",
-    "RelativePath": "api/CouponAPI",
+    "RelativePath": "api/coupon22",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -48,7 +48,7 @@
   {
     "ContainingType": "Mango.Services.Coupon.Controllers.CouponAPIController",
     "Method": "Put",
-    "RelativePath": "api/CouponAPI",
+    "RelativePath": "api/coupon22",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -73,34 +73,8 @@
   },
   {
     "ContainingType": "Mango.Services.Coupon.Controllers.CouponAPIController",
-    "Method": "Delete",
-    "RelativePath": "api/CouponAPI",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Mango.Services.Coupon.Models.Dto.ResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Mango.Services.Coupon.Controllers.CouponAPIController",
     "Method": "Get",
-    "RelativePath": "api/CouponAPI/{id}",
+    "RelativePath": "api/coupon22/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -125,8 +99,34 @@
   },
   {
     "ContainingType": "Mango.Services.Coupon.Controllers.CouponAPIController",
+    "Method": "Delete",
+    "RelativePath": "api/coupon22/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Mango.Services.Coupon.Models.Dto.ResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Mango.Services.Coupon.Controllers.CouponAPIController",
     "Method": "Get",
-    "RelativePath": "api/CouponAPI/GetByCode/{code}",
+    "RelativePath": "api/coupon22/GetByCode/{code}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
