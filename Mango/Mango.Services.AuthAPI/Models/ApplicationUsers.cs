@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Mango.Services.AuthAPI.AuthModels
+namespace Mango.Services.AuthAPI.Models
 {
     public class ApplicationUsers : IdentityUser
     {
